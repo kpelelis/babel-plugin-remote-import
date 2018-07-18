@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-remote-import",
-  "version": "0.0.1",
+  "version": "0.0.1-pre",
   "description": "Enables import of remote files",
   "main": "dist/index.js",
   "scripts": {
