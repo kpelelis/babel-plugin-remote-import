@@ -9,7 +9,8 @@
     "test": "jest --env=node",
     "test:watch": "jest --env=node --watch",
     "test:coverage": "jest --env=node --collectCoverageFrom='src/**/*.js' --coverage",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "travis-deploy-once": "travis-deploy-once"
   },
   "files": [
     "dist"
@@ -28,7 +29,8 @@
     "eslint": "^5.1.0",
     "eslint-plugin-prettier": "^2.6.2",
     "prettier": "1.13.7",
-    "semantic-release": "^15.8.0"
+    "semantic-release": "^15.8.0",
+    "travis-deploy-once": "^5.0.1"
   },
   "dependencies": {
     "cross-env": "^5.2.0",
