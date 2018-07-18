@@ -32,7 +32,7 @@ function remoteImportPlugin({ types }) {
         const resourcePath = path.join(os.tmpdir(), resourceName);
 
         // Create a temporary file
-        const fst = fs.createWriteStream(resourceName);
+        const fst = fs.createWriteStream(resourcePath);
         // And replace the import declaration with the new filepath
         const repl = types.ImportDeclaration(
           p.node.specifiers,
