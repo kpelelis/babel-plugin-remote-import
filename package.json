@@ -1,20 +1,20 @@
 {
   "name": "babel-plugin-remote-import",
-  "version": "0.0.0-development",
+  "version": "0.0.1",
   "description": "Enables import of remote files",
   "main": "dist/index.js",
   "scripts": {
-    "build":
-      "cross-env NODE_ENV=production babel src -d dist --ignore 'src/**/*.test.js' --copy-files",
+    "build": "cross-env NODE_ENV=production babel src -d dist --ignore 'src/**/*.test.js' --copy-files",
     "defaults": "webpack-defaults",
     "test": "jest --env=node -u && jest --env=node",
     "test:watch": "jest --env=node --watch",
-    "test:coverage":
-      "jest --env=node --collectCoverageFrom='src/**/*.js' --coverage",
+    "test:coverage": "jest --env=node --collectCoverageFrom='src/**/*.js' --coverage",
     "semantic-release": "semantic-release",
     "travis-deploy-once": "travis-deploy-once"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "author": "Kostas Pelelis <kpelelis@gmail.com>",
   "license": "MIT",
   "devDependencies": {
@@ -26,12 +26,12 @@
     "babel-preset-env": "^1.7.0",
     "babel-types": "^6.26.0",
     "babylon": "^6.18.0",
+    "cross-env": "^5.2.0",
     "eslint": "^5.1.0",
     "eslint-plugin-prettier": "^2.6.2",
+    "jest": "^23.4.1",
     "prettier": "1.13.7",
     "semantic-release": "^15.8.0",
-    "jest": "^23.4.1",
-    "cross-env": "^5.2.0",
     "travis-deploy-once": "^5.0.1"
   },
   "dependencies": {},
