@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`remote-import Correct usage: Correct usage 1`] = `
+"
+import image from 'https://i.imgur.com/hQVq8qN.jpg'
+
+console.log(image)
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import image from \\"/var/folders/rh/w4hpfkkn4q54mr1hmldsxj7h0000gp/T/hQVq8qN.jpg\\";
+
+console.log(image);
+
+"
+`;
+
+exports[`remote-import Incorrect path: Incorrect path 1`] = `
+"
+import image from 'https://www.google.com'
+
+console.log(image)
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import image from \\"https://www.google.com\\";
+
+console.log(image);
+
+"
+`;
+
+exports[`remote-import Should not replace path: Should not replace path 1`] = `
+"
+import image from './test.js'
+
+console.log(image)
+
+      ↓ ↓ ↓ ↓ ↓ ↓
+
+import image from \\"./test.js\\";
+
+console.log(image);
+
+"
+`;

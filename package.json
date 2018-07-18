@@ -1,0 +1,45 @@
+{
+  "name": "babel-plugin-remote-import",
+  "version": "0.0.0-development",
+  "description": "Enables import of remote files",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production babel src -d dist --ignore 'src/**/*.test.js' --copy-files",
+    "defaults": "webpack-defaults",
+    "test": "jest --env=node",
+    "test:watch": "jest --env=node --watch",
+    "test:coverage": "jest --env=node --collectCoverageFrom='src/**/*.js' --coverage",
+    "semantic-release": "semantic-release"
+  },
+  "files": [
+    "dist"
+  ],
+  "author": "Kostas Pelelis <kpelelis@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.4.0",
+    "babel-plugin-tester": "^5.4.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-types": "^6.26.0",
+    "babylon": "^6.18.0",
+    "eslint": "^5.1.0",
+    "eslint-plugin-prettier": "^2.6.2",
+    "prettier": "1.13.7",
+    "semantic-release": "^15.8.0"
+  },
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "jest": "^23.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kpelelis/babel-plugin-remote-import"
+  },
+  "bugs": {
+    "url": "https://github.com/kpelelis/babel-plugin-remote-import"
+  },
+  "homepage": "https://github.com/kpelelis/babel-plugin-remote-import#readme"
+}
