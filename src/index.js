@@ -29,7 +29,7 @@ function remoteImportPlugin({ types }) {
           return;
         }
         // Should we version this with a hash?
-        const resourcePath = path.join(os.tmpdir(), resourceName);
+        const resourcePath = path.resolve(path.join(os.tmpdir(), resourceName));
 
         // Create a temporary file
         const fst = fs.createWriteStream(resourcePath);
